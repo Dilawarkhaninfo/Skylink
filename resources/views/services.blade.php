@@ -134,7 +134,7 @@
 
 
 <!-- Testimonial Start -->
-<div class="container-fluid testimonial pb-5">
+<div class="container-fluid testimonial py-5">
     <div class="container pb-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
             <h1 class="display-5 text-capitalize mb-3">Our Clients<span class="text-primary"> Reviews</span></h1>

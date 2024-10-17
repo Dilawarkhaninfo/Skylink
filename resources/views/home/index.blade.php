@@ -7,7 +7,7 @@
 @section('content')
 
 <!-- Carousel Start -->
-<div class="header-carousel">
+<div class="header-carousel p-0 m-0">
     <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
@@ -20,103 +20,269 @@
                 <div class="carousel-caption">
                     <div class="container py-4">
                         <div class="row g-5">
-                            <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s"
+                            <div class="col-lg-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s"
                                 style="animation-delay: 1s;">
                                 <div class="bg-secondary rounded p-5">
                                     <h4 class="text-white mb-4">BOOK YOUR CAR PARKING NOW</h4>
-                                    <form>
-                                        <div class="row g-3">
-                                            <div class="col-12">
-                                                <select class="form-select" aria-label="Select car type">
-                                                    <option selected>Select Your Car Type</option>
-                                                    <option value="1">VW Golf VII</option>
-                                                    <option value="2">Audi A1 S-Line</option>
-                                                    <option value="3">Toyota Camry</option>
-                                                    <option value="4">BMW 320 ModernLine</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-map-marker-alt"></span><span
-                                                            class="ms-1">Pick Up</span>
+
+                                    <!-- Tabs Navigation -->
+                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="parking-tab" data-bs-toggle="tab"
+                                                data-bs-target="#parking" type="button" role="tab"
+                                                aria-controls="parking" aria-selected="true"><span
+                                                    class="text-black">Airport Parking </span></button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="hotel-parking-tab" data-bs-toggle="tab"
+                                                data-bs-target="#hotel-parking" type="button" role="tab"
+                                                aria-controls="hotel-parking" aria-selected="false"><span
+                                                    class="text-black">Airport Hotel with
+                                                    Parking </span></button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="lounge-tab" data-bs-toggle="tab"
+                                                data-bs-target="#lounge" type="button" role="tab" aria-controls="lounge"
+                                                aria-selected="false"><span class="text-black">Airport
+                                                    Lounge</span></button>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Tab Content -->
+                                    <div class="tab-content" id="myTabContent">
+                                        <!-- Airport Parking -->
+                                        <div class="tab-pane fade show active" id="parking" role="tabpanel"
+                                            aria-labelledby="parking-tab">
+                                            <form>
+                                                <div class="row text-start g-3 mt-3">
+                                                    <!-- Airport Name -->
+                                                    <div class="col-12">
+                                                        <label for="airport-name"
+                                                            class="form-label text-white text-start">Airport
+                                                            Name</label>
+                                                        <input id="airport-name" class="form-control" type="text"
+                                                            placeholder="Enter Airport Name"
+                                                            aria-label="Enter Airport Name">
                                                     </div>
-                                                    <input class="form-control" type="text"
-                                                        placeholder="Enter a City or Airport"
-                                                        aria-label="Enter a City or Airport">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <a href="#" class="text-start text-white d-block mb-2">Need a different
-                                                    drop-off location?</a>
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-map-marker-alt"></span><span
-                                                            class="ms-1">Drop Off</span>
+                                                    <!-- Drop-off Date and Time -->
+                                                    <div class="col-6">
+                                                        <label for="dropoff-date"
+                                                            class="form-label text-white text-start">Drop-off
+                                                            Date</label>
+                                                        <input id="dropoff-date" class="form-control" type="date"
+                                                            placeholder="Drop-off Date" aria-label="Drop-off Date">
                                                     </div>
-                                                    <input class="form-control" type="text"
-                                                        placeholder="Enter a City or Airport"
-                                                        aria-label="Enter a City or Airport">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick
-                                                            Up</span>
+                                                    <div class="col-6">
+                                                        <label for="dropoff-time"
+                                                            class="form-label text-white text-start">Drop-off
+                                                            Time</label>
+                                                        <input id="dropoff-time" class="form-control" type="time"
+                                                            placeholder="Drop-off Time" aria-label="Drop-off Time">
                                                     </div>
-                                                    <input class="form-control" type="date">
-                                                    <select class="form-select ms-3" aria-label="Select pickup time">
-                                                        <option selected>12:00 AM</option>
-                                                        <option value="1">1:00 AM</option>
-                                                        <option value="2">2:00 AM</option>
-                                                        <option value="3">3:00 AM</option>
-                                                        <option value="4">4:00 AM</option>
-                                                        <option value="5">5:00 AM</option>
-                                                        <option value="6">6:00 AM</option>
-                                                        <option value="7">7:00 AM</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop
-                                                            Off</span>
+                                                    <!-- Pickup Date and Time -->
+                                                    <div class="col-6">
+                                                        <label for="pickup-date"
+                                                            class="form-label text-white text-start">Pickup
+                                                            Date</label>
+                                                        <input id="pickup-date" class="form-control" type="date"
+                                                            placeholder="Pickup Date" aria-label="Pickup Date">
                                                     </div>
-                                                    <input class="form-control" type="date">
-                                                    <select class="form-select ms-3" aria-label="Select drop-off time">
-                                                        <option selected>12:00 AM</option>
-                                                        <option value="1">1:00 AM</option>
-                                                        <option value="2">2:00 AM</option>
-                                                        <option value="3">3:00 AM</option>
-                                                        <option value="4">4:00 AM</option>
-                                                        <option value="5">5:00 AM</option>
-                                                        <option value="6">6:00 AM</option>
-                                                        <option value="7">7:00 AM</option>
-                                                    </select>
+                                                    <div class="col-6">
+                                                        <label for="pickup-time"
+                                                            class="form-label text-white text-start">Pickup
+                                                            Time</label>
+                                                        <input id="pickup-time" class="form-control" type="time"
+                                                            placeholder="Pickup Time" aria-label="Pickup Time">
+                                                    </div>
+                                                    <!-- Promo Code -->
+                                                    <div class="col-12">
+                                                        <label for="promo-code"
+                                                            class="form-label text-white text-start">Promo Code
+                                                            (Optional)</label>
+                                                        <input id="promo-code" class="form-control" type="text"
+                                                            placeholder="Promo Code (Optional)" aria-label="Promo Code">
+                                                    </div>
+                                                    <!-- Extras -->
+                                                    <div class="col-12">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="freeSMS">
+                                                            <label class="form-check-label text-white"
+                                                                for="freeSMS">Free SMS Updates</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="cancelFree">
+                                                            <label class="form-check-label text-white"
+                                                                for="cancelFree">Cancel for Free</label>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Submit Button -->
+                                                    <div class="col-12">
+                                                        <button class="btn btn-light w-100 py-2">Search for
+                                                            Parking</button>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <label for="copenhagenCode" class="input-group-text">Copenhagen
-                                                        Code</label>
-                                                    <input type="text" class="form-control" id="copenhagenCode"
-                                                        placeholder="Enter your code" aria-label="Copenhagen code">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <button class="btn btn-light w-100 py-2">Book Now</button>
-                                            </div>
+                                            </form>
                                         </div>
-                                    </form>
+
+                                        <!-- Airport Hotel with Parking -->
+                                        <div class="tab-pane fade" id="hotel-parking" role="tabpanel"
+                                            aria-labelledby="hotel-parking-tab">
+                                            <form>
+                                                <div class="row text-start g-3 mt-3">
+                                                    <!-- Airport Name -->
+                                                    <div class="col-12">
+                                                        <label for="hotel-airport-name"
+                                                            class="form-label text-white text-start">Airport
+                                                            Name</label>
+                                                        <input id="hotel-airport-name" class="form-control" type="text"
+                                                            placeholder="Enter Airport Name"
+                                                            aria-label="Enter Airport Name">
+                                                    </div>
+                                                    <!-- Night Of Stay -->
+                                                    <div class="col-6">
+                                                        <label for="night-of-stay"
+                                                            class="form-label text-white text-start">Night
+                                                            Of Stay</label>
+                                                        <input id="night-of-stay" class="form-control" type="date"
+                                                            placeholder="Night Of Stay" aria-label="Night Of Stay">
+                                                    </div>
+                                                    <!-- Parking Until Date -->
+                                                    <div class="col-6">
+                                                        <label for="parking-until"
+                                                            class="form-label text-white text-start">Parking
+                                                            Until</label>
+                                                        <input id="parking-until" class="form-control" type="date"
+                                                            placeholder="Parking Until" aria-label="Parking Until">
+                                                    </div>
+                                                    <!-- Room Type -->
+                                                    <div class="col-12">
+                                                        <label for="room-type"
+                                                            class="form-label text-white text-start">Room
+                                                            Type</label>
+                                                        <select id="room-type" class="form-select"
+                                                            aria-label="Select Room Type">
+                                                            <option selected>Select Room Type</option>
+                                                            <option value="1">Single Room</option>
+                                                            <option value="2">Double Room</option>
+                                                            <option value="3">Family Room</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- Promo Code -->
+                                                    <div class="col-12">
+                                                        <label for="hotel-promo-code"
+                                                            class="form-label text-white text-start">Promo Code
+                                                            (Optional)</label>
+                                                        <input id="hotel-promo-code" class="form-control" type="text"
+                                                            placeholder="Promo Code (Optional)" aria-label="Promo Code">
+                                                    </div>
+                                                    <!-- Extras -->
+                                                    <div class="col-12">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="freeSMS-hotel">
+                                                            <label class="form-check-label text-white"
+                                                                for="freeSMS-hotel">Free SMS Updates</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="cancelFree-hotel">
+                                                            <label class="form-check-label text-white"
+                                                                for="cancelFree-hotel">Cancel for Free</label>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Submit Button -->
+                                                    <div class="col-12">
+                                                        <button class="btn btn-light w-100 py-2">Search for Hotel &
+                                                            Parking</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- Airport Lounge -->
+                                        <div class="tab-pane fade" id="lounge" role="tabpanel"
+                                            aria-labelledby="lounge-tab">
+                                            <form>
+                                                <div class="row text-start g-3 mt-3">
+                                                    <!-- Room Type -->
+                                                    <div class="col-12">
+                                                        <label for="lounge-room-type"
+                                                            class="form-label text-white text-start">Room
+                                                            Type</label>
+                                                        <select id="lounge-room-type" class="form-select"
+                                                            aria-label="Select Room Type">
+                                                            <option selected>Select Room Type</option>
+                                                            <option value="1">Business Lounge</option>
+                                                            <option value="2">VIP Lounge</option>
+                                                        </select>
+                                                    </div>
+                                                    <!-- Infants (0-1) -->
+                                                    <div class="col-4">
+                                                        <label for="infants"
+                                                            class="form-label text-white text-start">Infants
+                                                            (0-1)</label>
+                                                        <input id="infants" class="form-control" type="number"
+                                                            placeholder="Infants (0-1)" min="0"
+                                                            aria-label="Infants (0-1)">
+                                                    </div>
+                                                    <!-- Children (1-12) -->
+                                                    <div class="col-4">
+                                                        <label for="children"
+                                                            class="form-label text-white text-start">Children
+                                                            (1-12)</label>
+                                                        <input id="children" class="form-control" type="number"
+                                                            placeholder="Children (1-12)" min="0"
+                                                            aria-label="Children (1-12)">
+                                                    </div>
+                                                    <!-- Adults (12+) -->
+                                                    <div class="col-4">
+                                                        <label for="adults"
+                                                            class="form-label text-white text-start">Adults
+                                                            (12+)</label>
+                                                        <input id="adults" class="form-control" type="number"
+                                                            placeholder="Adults (12+)" min="0"
+                                                            aria-label="Adults (12+)">
+                                                    </div>
+                                                    <!-- Departure Date -->
+                                                    <div class="col-6">
+                                                        <label for="departure-date"
+                                                            class="form-label text-white text-start">Departure
+                                                            Date</label>
+                                                        <input id="departure-date" class="form-control" type="date"
+                                                            placeholder="Departure Date" aria-label="Departure Date">
+                                                    </div>
+                                                    <!-- Lounge Entry Time -->
+                                                    <div class="col-6">
+                                                        <label for="lounge-entry-time"
+                                                            class="form-label text-white text-start">Lounge Entry
+                                                            Time</label>
+                                                        <input id="lounge-entry-time" class="form-control" type="time"
+                                                            placeholder="Lounge Entry Time"
+                                                            aria-label="Lounge Entry Time">
+                                                    </div>
+                                                    <!-- Promo Code -->
+                                                    <div class="col-12">
+                                                        <label for="lounge-promo-code"
+                                                            class="form-label text-white text-start">Promo Code
+                                                            (Optional)</label>
+                                                        <input id="lounge-promo-code" class="form-control" type="text"
+                                                            placeholder="Promo Code (Optional)" aria-label="Promo Code">
+                                                    </div>
+                                                    <!-- Submit Button -->
+                                                    <div class="col-12">
+                                                        <button class="btn btn-light w-100 py-2">Search for
+                                                            Lounge</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
-                            <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight"
+                            <div class="col-lg-5 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight"
                                 data-delay="1s" style="animation-delay: 1s;">
                                 <div class="text-start">
                                     <h1 class="display-5 text-white">Get 15% Off Your Rental</h1>
@@ -718,91 +884,6 @@
         </div>
     </div>
     <!-- Car Categories End -->
-
-
-    <!-- Blog Start -->
-    <div class="container-fluid blog py-5">
-        <div class="container py-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                <h1 class="display-5 text-capitalize mb-3">SkyLink <span class="text-primary">Blog & News</span></h1>
-                <p class="mb-0">Stay updated with the latest trends, tips, and news in the rental car industry. Explore
-                    our
-                    insights to enhance your travel experience!</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-1.jpg" class="img-fluid rounded-top w-100"
-                                alt="Rental Cars how to check driving fines?">
-                        </div>
-                        <div class="blog-content rounded-bottom p-4">
-                            <div class="blog-date">30 Dec 2025</div>
-                            <div class="blog-comment my-3">
-                                <div class="small"><span class="fas fa-user text-primary"></span><span
-                                        class="ms-2">Martin.C</span></div>
-                                <div class="small"><span class="fas fa-comment-alt text-primary"></span><span
-                                        class="ms-2">6
-                                        Comments</span></div>
-                            </div>
-                            <a href="#" class="h4 d-block mb-3">How to Check Driving Fines for Rental Cars?</a>
-                            <p class="mb-3">Navigating the world of driving fines can be challenging. Here’s how to
-                                ensure
-                                you’re informed and prepared during your rental.</p>
-                            <a href="#" class="">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-2.jpg" class="img-fluid rounded-top w-100"
-                                alt="Rental cost of sport and other cars">
-                        </div>
-                        <div class="blog-content rounded-bottom p-4">
-                            <div class="blog-date">25 Dec 2025</div>
-                            <div class="blog-comment my-3">
-                                <div class="small"><span class="fas fa-user text-primary"></span><span
-                                        class="ms-2">Martin.C</span></div>
-                                <div class="small"><span class="fas fa-comment-alt text-primary"></span><span
-                                        class="ms-2">6
-                                        Comments</span></div>
-                            </div>
-                            <a href="#" class="h4 d-block mb-3">Understanding Rental Costs for Sports Cars</a>
-                            <p class="mb-3">Want to rent a sports car? Learn about the factors affecting rental prices
-                                and
-                                get the best deals.</p>
-                            <a href="#" class="">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="blog-item">
-                        <div class="blog-img">
-                            <img src="img/blog-3.jpg" class="img-fluid rounded-top w-100"
-                                alt="Document required for car rental">
-                        </div>
-                        <div class="blog-content rounded-bottom p-4">
-                            <div class="blog-date">27 Dec 2025</div>
-                            <div class="blog-comment my-3">
-                                <div class="small"><span class="fas fa-user text-primary"></span><span
-                                        class="ms-2">Martin.C</span></div>
-                                <div class="small"><span class="fas fa-comment-alt text-primary"></span><span
-                                        class="ms-2">6
-                                        Comments</span></div>
-                            </div>
-                            <a href="#" class="h4 d-block mb-3">Essential Documents Required for Car Rental</a>
-                            <p class="mb-3">Are you ready to rent a car? Make sure you have all the necessary documents
-                                to
-                                streamline your rental experience.</p>
-                            <a href="#" class="">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Blog End -->
 
     <!-- Banner Start -->
     <div class="container-fluid banner pb-5 wow zoomInDown">
