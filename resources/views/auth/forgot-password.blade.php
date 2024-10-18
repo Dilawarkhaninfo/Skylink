@@ -68,28 +68,35 @@
 
     <body>
         <section class="mt-5">
-            <!--  Request me for a signup form or any type of help  -->
-            <div class="login-form mt-5">
-                <form action="/examples/actions/confirmation.php" class="mt-5" method="post">
-                    <div class="logo-container text-center p-4 ">
+            <div class="container-fluid steps d-flex justify-content-center align-items-center"
+                style="min-height: 100vh;">
+                <div class="login-form p-5 bg-light rounded shadow">
+                    <div class="text-center mb-4">
                         <span>
-                            <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo-circle p-3">
+                            <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo-circle mb-4"
+                                style="width: 100px;">
                         </span>
+                        <h2 class="modal-title mb-3">Forgot Password?</h2>
+                        <p class="text-muted mb-4">Enter your email address below and we will send you a link to reset
+                            your password.</p>
                     </div>
-                    <h4 class="modal-title">Forgot Password</h4>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email" required="required">
+                    <form action="/examples/actions/confirmation.php" method="post">
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control form-control-lg" placeholder="Email"
+                                required="required">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block text-white btn-lg pt-3">
+                            Send Reset Link
+                        </button>
+                    </form>
+                    <div class="card-footer text-center mt-4">
+                        <p class="mb-0">Remember your password? <a href="{{ route('auth.login') }}">Back to Login</a>
+                        </p>
                     </div>
-                    <a href="{{ url('/admin/dashboard') }}" class="btn btn-success btn-block text-white btn-lg pt-4"
-                        value="Login">
-                        Send Reset Link</a>
-                </form>
-                <div class="card-footer text-center">
-                    <p class="mb-0"><a href="{{ route('auth.login') }}">Back to Login</a></p>
                 </div>
             </div>
-            </div>
         </section>
+
 
 
         <!-- jQuery (Must be loaded before Bootstrap JS and other scripts that depend on it) -->

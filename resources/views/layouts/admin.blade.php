@@ -75,13 +75,14 @@
 
     .sidebar-nav>li {
         text-indent: 10px;
-        line-height: 42px;
+        http: //127.0.0.1:8000/admin/users
+            line-height: 42px;
     }
 
     .sidebar-nav>li>a {
         display: block;
         text-decoration: none;
-        color: #757575;
+        color: white;
         font-weight: 600;
         font-size: 18px;
         padding: 10px;
@@ -184,7 +185,7 @@
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center {{ request()->is('admin/dashboard') || request()->is('admin') ? 'active' : '' }}"
                         href="{{ route('admin.dashboard') }}">
-                        <i class="fas fa-tachometer-alt me-2"></i> Home
+                        <i class="fas fa-tachometer-alt me-2"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
@@ -194,30 +195,68 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/cars*') ? 'active' : '' }}"
+                        href="{{ route('admin.cars.index') }}">
+                        <i class="fas fa-car me-2"></i> Cars
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link d-flex align-items-center {{ request()->is('admin/users*') ? 'active' : '' }}"
                         href="{{ route('admin.users.index') }}">
                         <i class="fas fa-users me-2"></i> Users
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/reports') ? 'active' : '' }}"
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/reports*') ? 'active' : '' }}"
                         href="{{ route('admin.reports.index') }}">
                         <i class="fas fa-chart-line me-2"></i> Reports
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/settings*') ? 'active' : '' }}"
-                        href="{{ route('admin.settings.index') }}">
-                        <i class="fas fa-cog me-2"></i> Settings
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/pricing*') ? 'active' : '' }}"
+                        href="{{ route('admin.pricing.index') }}">
+                        <i class="fas fa-dollar-sign me-2"></i> Pricing
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center text-white logout-link" href="{{ route('home') }}">
-                        <i class="fas fa-sign-out-alt me-2"></i> Logout
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/notifications*') ? 'active' : '' }}"
+                        href="{{ route('admin.notifications.index') }}">
+                        <i class="fas fa-bell me-2"></i> Alerts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/calendar*') ? 'active' : '' }}"
+                        href="{{ route('admin.calendar.index') }}">
+                        <i class="fas fa-calendar me-2"></i> Calendar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/refunds*') ? 'active' : '' }}"
+                        href="{{ route('admin.refunds.index') }}">
+                        <i class="fas fa-undo me-2"></i> Refunds
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/two-factor-auth*') ? 'active' : '' }}"
+                        href="{{ route('admin.two-factor-auth.index') }}">
+                        <i class="fas fa-lock me-2"></i> 2FA
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center {{ request()->is('admin/chat*') ? 'active' : '' }}"
+                        href="{{ route('admin.chat.index') }}">
+                        <i class="fas fa-comments me-2"></i> Chat
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center {{ request()->is('home*') ? 'active' : '' }}"
+                        href="{{ route('home') }}">
+                        <i class="fas fa-power-off me-2"></i> Logout
                     </a>
                 </li>
             </ul>
         </aside>
+
 
         <!-- Page Content -->
         <div id="page-content-wrapper" class="mt-2">
@@ -228,7 +267,6 @@
                     <div class="col">
                         @yield('content')
                     </div>
-
 
                 </div>
             </div>

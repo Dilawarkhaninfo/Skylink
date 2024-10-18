@@ -7,483 +7,134 @@
 @section('content')
 
 <!-- Carousel Start -->
-<div class="header-carousel p-0 m-0">
-    <div id="carouselId" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-        <ol class="carousel-indicators">
-            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="First slide"></li>
-            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-                <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="First slide" />
-                <div class="carousel-caption">
-                    <div class="container py-4">
-                        <div class="row g-5">
-                            <div class="col-lg-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s"
-                                style="animation-delay: 1s;">
-                                <div class="bg-secondary rounded p-5">
-                                    <h4 class="text-white mb-4">BOOK YOUR CAR PARKING NOW</h4>
-
-                                    <!-- Tabs Navigation -->
-                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="parking-tab" data-bs-toggle="tab"
-                                                data-bs-target="#parking" type="button" role="tab"
-                                                aria-controls="parking" aria-selected="true"><span
-                                                    class="text-black">Airport Parking </span></button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="hotel-parking-tab" data-bs-toggle="tab"
-                                                data-bs-target="#hotel-parking" type="button" role="tab"
-                                                aria-controls="hotel-parking" aria-selected="false"><span
-                                                    class="text-black">Airport Hotel with
-                                                    Parking </span></button>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <button class="nav-link" id="lounge-tab" data-bs-toggle="tab"
-                                                data-bs-target="#lounge" type="button" role="tab" aria-controls="lounge"
-                                                aria-selected="false"><span class="text-black">Airport
-                                                    Lounge</span></button>
-                                        </li>
-                                    </ul>
-
-                                    <!-- Tab Content -->
-                                    <div class="tab-content" id="myTabContent">
-                                        <!-- Airport Parking -->
-                                        <div class="tab-pane fade show active" id="parking" role="tabpanel"
-                                            aria-labelledby="parking-tab">
-                                            <form>
-                                                <div class="row text-start g-3 mt-3">
-                                                    <!-- Airport Name -->
-                                                    <div class="col-12">
-                                                        <label for="airport-name"
-                                                            class="form-label text-white text-start">Airport
-                                                            Name</label>
-                                                        <input id="airport-name" class="form-control" type="text"
-                                                            placeholder="Enter Airport Name"
-                                                            aria-label="Enter Airport Name">
-                                                    </div>
-                                                    <!-- Drop-off Date and Time -->
-                                                    <div class="col-6">
-                                                        <label for="dropoff-date"
-                                                            class="form-label text-white text-start">Drop-off
-                                                            Date</label>
-                                                        <input id="dropoff-date" class="form-control" type="date"
-                                                            placeholder="Drop-off Date" aria-label="Drop-off Date">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="dropoff-time"
-                                                            class="form-label text-white text-start">Drop-off
-                                                            Time</label>
-                                                        <input id="dropoff-time" class="form-control" type="time"
-                                                            placeholder="Drop-off Time" aria-label="Drop-off Time">
-                                                    </div>
-                                                    <!-- Pickup Date and Time -->
-                                                    <div class="col-6">
-                                                        <label for="pickup-date"
-                                                            class="form-label text-white text-start">Pickup
-                                                            Date</label>
-                                                        <input id="pickup-date" class="form-control" type="date"
-                                                            placeholder="Pickup Date" aria-label="Pickup Date">
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <label for="pickup-time"
-                                                            class="form-label text-white text-start">Pickup
-                                                            Time</label>
-                                                        <input id="pickup-time" class="form-control" type="time"
-                                                            placeholder="Pickup Time" aria-label="Pickup Time">
-                                                    </div>
-                                                    <!-- Promo Code -->
-                                                    <div class="col-12">
-                                                        <label for="promo-code"
-                                                            class="form-label text-white text-start">Promo Code
-                                                            (Optional)</label>
-                                                        <input id="promo-code" class="form-control" type="text"
-                                                            placeholder="Promo Code (Optional)" aria-label="Promo Code">
-                                                    </div>
-                                                    <!-- Extras -->
-                                                    <div class="col-12">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="freeSMS">
-                                                            <label class="form-check-label text-white"
-                                                                for="freeSMS">Free SMS Updates</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="cancelFree">
-                                                            <label class="form-check-label text-white"
-                                                                for="cancelFree">Cancel for Free</label>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Submit Button -->
-                                                    <div class="col-12">
-                                                        <button class="btn btn-light w-100 py-2">Search for
-                                                            Parking</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                        <!-- Airport Hotel with Parking -->
-                                        <div class="tab-pane fade" id="hotel-parking" role="tabpanel"
-                                            aria-labelledby="hotel-parking-tab">
-                                            <form>
-                                                <div class="row text-start g-3 mt-3">
-                                                    <!-- Airport Name -->
-                                                    <div class="col-12">
-                                                        <label for="hotel-airport-name"
-                                                            class="form-label text-white text-start">Airport
-                                                            Name</label>
-                                                        <input id="hotel-airport-name" class="form-control" type="text"
-                                                            placeholder="Enter Airport Name"
-                                                            aria-label="Enter Airport Name">
-                                                    </div>
-                                                    <!-- Night Of Stay -->
-                                                    <div class="col-6">
-                                                        <label for="night-of-stay"
-                                                            class="form-label text-white text-start">Night
-                                                            Of Stay</label>
-                                                        <input id="night-of-stay" class="form-control" type="date"
-                                                            placeholder="Night Of Stay" aria-label="Night Of Stay">
-                                                    </div>
-                                                    <!-- Parking Until Date -->
-                                                    <div class="col-6">
-                                                        <label for="parking-until"
-                                                            class="form-label text-white text-start">Parking
-                                                            Until</label>
-                                                        <input id="parking-until" class="form-control" type="date"
-                                                            placeholder="Parking Until" aria-label="Parking Until">
-                                                    </div>
-                                                    <!-- Room Type -->
-                                                    <div class="col-12">
-                                                        <label for="room-type"
-                                                            class="form-label text-white text-start">Room
-                                                            Type</label>
-                                                        <select id="room-type" class="form-select"
-                                                            aria-label="Select Room Type">
-                                                            <option selected>Select Room Type</option>
-                                                            <option value="1">Single Room</option>
-                                                            <option value="2">Double Room</option>
-                                                            <option value="3">Family Room</option>
-                                                        </select>
-                                                    </div>
-                                                    <!-- Promo Code -->
-                                                    <div class="col-12">
-                                                        <label for="hotel-promo-code"
-                                                            class="form-label text-white text-start">Promo Code
-                                                            (Optional)</label>
-                                                        <input id="hotel-promo-code" class="form-control" type="text"
-                                                            placeholder="Promo Code (Optional)" aria-label="Promo Code">
-                                                    </div>
-                                                    <!-- Extras -->
-                                                    <div class="col-12">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="freeSMS-hotel">
-                                                            <label class="form-check-label text-white"
-                                                                for="freeSMS-hotel">Free SMS Updates</label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value=""
-                                                                id="cancelFree-hotel">
-                                                            <label class="form-check-label text-white"
-                                                                for="cancelFree-hotel">Cancel for Free</label>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Submit Button -->
-                                                    <div class="col-12">
-                                                        <button class="btn btn-light w-100 py-2">Search for Hotel &
-                                                            Parking</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                        <!-- Airport Lounge -->
-                                        <div class="tab-pane fade" id="lounge" role="tabpanel"
-                                            aria-labelledby="lounge-tab">
-                                            <form>
-                                                <div class="row text-start g-3 mt-3">
-                                                    <!-- Room Type -->
-                                                    <div class="col-12">
-                                                        <label for="lounge-room-type"
-                                                            class="form-label text-white text-start">Room
-                                                            Type</label>
-                                                        <select id="lounge-room-type" class="form-select"
-                                                            aria-label="Select Room Type">
-                                                            <option selected>Select Room Type</option>
-                                                            <option value="1">Business Lounge</option>
-                                                            <option value="2">VIP Lounge</option>
-                                                        </select>
-                                                    </div>
-                                                    <!-- Infants (0-1) -->
-                                                    <div class="col-4">
-                                                        <label for="infants"
-                                                            class="form-label text-white text-start">Infants
-                                                            (0-1)</label>
-                                                        <input id="infants" class="form-control" type="number"
-                                                            placeholder="Infants (0-1)" min="0"
-                                                            aria-label="Infants (0-1)">
-                                                    </div>
-                                                    <!-- Children (1-12) -->
-                                                    <div class="col-4">
-                                                        <label for="children"
-                                                            class="form-label text-white text-start">Children
-                                                            (1-12)</label>
-                                                        <input id="children" class="form-control" type="number"
-                                                            placeholder="Children (1-12)" min="0"
-                                                            aria-label="Children (1-12)">
-                                                    </div>
-                                                    <!-- Adults (12+) -->
-                                                    <div class="col-4">
-                                                        <label for="adults"
-                                                            class="form-label text-white text-start">Adults
-                                                            (12+)</label>
-                                                        <input id="adults" class="form-control" type="number"
-                                                            placeholder="Adults (12+)" min="0"
-                                                            aria-label="Adults (12+)">
-                                                    </div>
-                                                    <!-- Departure Date -->
-                                                    <div class="col-6">
-                                                        <label for="departure-date"
-                                                            class="form-label text-white text-start">Departure
-                                                            Date</label>
-                                                        <input id="departure-date" class="form-control" type="date"
-                                                            placeholder="Departure Date" aria-label="Departure Date">
-                                                    </div>
-                                                    <!-- Lounge Entry Time -->
-                                                    <div class="col-6">
-                                                        <label for="lounge-entry-time"
-                                                            class="form-label text-white text-start">Lounge Entry
-                                                            Time</label>
-                                                        <input id="lounge-entry-time" class="form-control" type="time"
-                                                            placeholder="Lounge Entry Time"
-                                                            aria-label="Lounge Entry Time">
-                                                    </div>
-                                                    <!-- Promo Code -->
-                                                    <div class="col-12">
-                                                        <label for="lounge-promo-code"
-                                                            class="form-label text-white text-start">Promo Code
-                                                            (Optional)</label>
-                                                        <input id="lounge-promo-code" class="form-control" type="text"
-                                                            placeholder="Promo Code (Optional)" aria-label="Promo Code">
-                                                    </div>
-                                                    <!-- Submit Button -->
-                                                    <div class="col-12">
-                                                        <button class="btn btn-light w-100 py-2">Search for
-                                                            Lounge</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
+<!-- Simplified Header Section without Carousel -->
+<div class="container-fluid steps p-0 m-0 bg-dark text-white">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center justify-content-center">
+            <div class="col-lg-10 py-5">
+                <!-- New Form Section -->
+                <div class=" rounded p-5">
+                    <h4 class="text-white text-center mb-4">Get 15% Off Your Rental
+                        Plan your trip now and enjoy great savings!</h4>
+                    <form>
+                        <div class="row text-start g-3 mt-3">
+                            <!-- Airport Name -->
+                            <div class="col-2">
+                                <label for="airport-name" class="form-label text-white">Airport Name</label>
+                                <input id="airport-name" class="form-control" type="text"
+                                    placeholder="Enter Airport Name" required>
                             </div>
-                            <div class="col-lg-5 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight"
-                                data-delay="1s" style="animation-delay: 1s;">
-                                <div class="text-start">
-                                    <h1 class="display-5 text-white">Get 15% Off Your Rental</h1>
-                                    <p>Plan your trip now and enjoy great savings!</p>
-                                </div>
+                            <!-- Drop-off Date and Time -->
+                            <div class="col-2">
+                                <label for="dropoff-date" class="form-label text-white">Drop-off Date</label>
+                                <input id="dropoff-date" class="form-control" type="date" required>
+                            </div>
+                            <div class="col-2">
+                                <label for="dropoff-time" class="form-label text-white">Drop-off Time</label>
+                                <input id="dropoff-time" class="form-control" type="time" required>
+                            </div>
+                            <!-- Pickup Date and Time -->
+                            <div class="col-2">
+                                <label for="pickup-date" class="form-label text-white">Pickup Date</label>
+                                <input id="pickup-date" class="form-control" type="date" required>
+                            </div>
+                            <div class="col-2">
+                                <label for="pickup-time" class="form-label text-white">Pickup Time</label>
+                                <input id="pickup-time" class="form-control" type="time" required>
+                            </div>
+                            <!-- Promo Code -->
+                            <div class="col-2">
+                                <label for="promo-code" class="form-label text-white">Voucher</label>
+                                <input id="promo-code" class="form-control" type="text"
+                                    placeholder="Enter Voucher (Optional)">
+                            </div>
+                            <!-- Extras -->
+                            <!-- Submit Button -->
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-2">Search for Parking</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Second slide" />
-                <div class="carousel-caption">
-                    <div class="container py-4">
-                        <div class="row g-5">
-                            <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s"
-                                style="animation-delay: 1s;">
-                                <div class="bg-secondary rounded p-5">
-                                    <h4 class="text-white mb-4">BOOK YOUR CAR PARKING NOW</h4>
-                                    <form>
-                                        <div class="row g-3">
-                                            <div class="col-12">
-                                                <select class="form-select" aria-label="Select car type">
-                                                    <option selected>Select Your Car Type</option>
-                                                    <option value="1">VW Golf VII</option>
-                                                    <option value="2">Audi A1 S-Line</option>
-                                                    <option value="3">Toyota Camry</option>
-                                                    <option value="4">BMW 320 ModernLine</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-map-marker-alt"></span><span
-                                                            class="ms-1">Pick Up</span>
-                                                    </div>
-                                                    <input class="form-control" type="text"
-                                                        placeholder="Enter a City or Airport"
-                                                        aria-label="Enter a City or Airport">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <a href="#" class="text-start text-white d-block mb-2">Need a different
-                                                    drop-off location?</a>
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-map-marker-alt"></span><span
-                                                            class="ms-1">Drop Off</span>
-                                                    </div>
-                                                    <input class="form-control" type="text"
-                                                        placeholder="Enter a City or Airport"
-                                                        aria-label="Enter a City or Airport">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-calendar-alt"></span><span class="ms-1">Pick
-                                                            Up</span>
-                                                    </div>
-                                                    <input class="form-control" type="date">
-                                                    <select class="form-select ms-3" aria-label="Select pickup time">
-                                                        <option selected>12:00 AM</option>
-                                                        <option value="1">1:00 AM</option>
-                                                        <option value="2">2:00 AM</option>
-                                                        <option value="3">3:00 AM</option>
-                                                        <option value="4">4:00 AM</option>
-                                                        <option value="5">5:00 AM</option>
-                                                        <option value="6">6:00 AM</option>
-                                                        <option value="7">7:00 AM</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <div
-                                                        class="d-flex align-items-center bg-light text-body rounded-start p-2">
-                                                        <span class="fas fa-calendar-alt"></span><span class="ms-1">Drop
-                                                            Off</span>
-                                                    </div>
-                                                    <input class="form-control" type="date">
-                                                    <select class="form-select ms-3" aria-label="Select drop-off time">
-                                                        <option selected>12:00 AM</option>
-                                                        <option value="1">1:00 AM</option>
-                                                        <option value="2">2:00 AM</option>
-                                                        <option value="3">3:00 AM</option>
-                                                        <option value="4">4:00 AM</option>
-                                                        <option value="5">5:00 AM</option>
-                                                        <option value="6">6:00 AM</option>
-                                                        <option value="7">7:00 AM</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="input-group">
-                                                    <label for="copenhagenCode" class="input-group-text">Copenhagen
-                                                        Code</label>
-                                                    <input type="text" class="form-control" id="copenhagenCode"
-                                                        placeholder="Enter your code" aria-label="Copenhagen code">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <button class="btn btn-light w-100 py-2">Book Now</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 d-none d-lg-flex fadeInRight animated" data-animation="fadeInRight"
-                                data-delay="1s" style="animation-delay: 1s;">
-                                <div class="text-start">
-                                    <h1 class="display-5 text-white">Get 15% Off Your Rental</h1>
-                                    <p>Plan your trip now and enjoy great savings!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Carousel End -->
 
 
 
 
 <!-- Features Start -->
-<div class="container-fluid feature py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h1 class="display-5 text-capitalize mb-3">SkyLink <span class="text-primary">Features</span></h1>
-            <p class="mb-0">Experience unparalleled convenience and service with our premium airport car parking
-                solutions.
-                Your satisfaction is our priority!
-            </p>
+<div class="container py-5">
+    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+        <h1 class="display-5 text-capitalize mb-3">SkyLink <span class="text-primary">Features</span></h1>
+        <p class="mb-0">Experience unparalleled convenience and service with our premium airport car parking
+            solutions.
+            Your satisfaction is our priority!
+        </p>
+    </div>
+    <div class="row g-4 align-items-center">
+        <div class="col-xl-4">
+            <div class="row gy-4 gx-0">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <span class="fas fa-trophy fa-2x text-white"></span>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">Premium Parking Services</h5>
+                            <p class="mb-0">Enjoy first-class parking solutions tailored to your needs at the
+                                airport.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <span class="fas fa-road fa-2x text-white"></span>
+                        </div>
+                        <div class="ms-4">
+                            <h5 class="mb-3">24/7 Customer Support</h5>
+                            <p class="mb-0">We're here for you around the clock to assist with any inquiries or
+                                issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row g-4 align-items-center">
-            <div class="col-xl-4">
-                <div class="row gy-4 gx-0">
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <span class="fas fa-trophy fa-2x text-white"></span>
-                            </div>
-                            <div class="ms-4">
-                                <h5 class="mb-3">Premium Parking Services</h5>
-                                <p class="mb-0">Enjoy first-class parking solutions tailored to your needs at the
-                                    airport.</p>
-                            </div>
+        <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+            <img src="img/features-img.png" class="img-fluid w-100" style="object-fit: cover;" alt="Img">
+        </div>
+        <div class="col-xl-4">
+            <div class="row gy-4 gx-0">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="feature-item justify-content-end">
+                        <div class="text-end me-4">
+                            <h5 class="mb-3">Affordable Rates</h5>
+                            <p class="mb-0">Get quality parking solutions without breaking the bank. Best prices
+                                guaranteed!</p>
+                        </div>
+                        <div class="feature-icon">
+                            <span class="fas fa-tag fa-2x text-white"></span>
                         </div>
                     </div>
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <span class="fas fa-road fa-2x text-white"></span>
-                            </div>
-                            <div class="ms-4">
-                                <h5 class="mb-3">24/7 Customer Support</h5>
-                                <p class="mb-0">We're here for you around the clock to assist with any inquiries or
-                                    issues.</p>
-                            </div>
+                </div>
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="feature-item justify-content-end">
+                        <div class="text-end me-4">
+                            <h5 class="mb-3">Free Shuttle Service</h5>
+                            <p class="mb-0">Enjoy complimentary pick-up and drop-off to and from the airport.</p>
+                        </div>
+                        <div class="feature-icon">
+                            <span class="fas fa-map-pin fa-2x text-white"></span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                <img src="img/features-img.png" class="img-fluid w-100" style="object-fit: cover;" alt="Img">
-            </div>
-            <div class="col-xl-4">
-                <div class="row gy-4 gx-0">
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item justify-content-end">
-                            <div class="text-end me-4">
-                                <h5 class="mb-3">Affordable Rates</h5>
-                                <p class="mb-0">Get quality parking solutions without breaking the bank. Best prices
-                                    guaranteed!</p>
-                            </div>
-                            <div class="feature-icon">
-                                <span class="fas fa-tag fa-2x text-white"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item justify-content-end">
-                            <div class="text-end me-4">
-                                <h5 class="mb-3">Free Shuttle Service</h5>
-                                <p class="mb-0">Enjoy complimentary pick-up and drop-off to and from the airport.</p>
-                            </div>
-                            <div class="feature-icon">
-                                <span class="fas fa-map-pin fa-2x text-white"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
 
-        </div>
     </div>
 </div>
 <!-- Features End -->
@@ -689,305 +340,227 @@
 </div>
 <!-- Steps End -->
 
-<!-- Car Categories Start -->
-<div class="container-fluid categories py-5">
+
+<div class="container py-5">
+    <!-- Header Section -->
+    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+        <h1 class="display-5 text-capitalize mb-3 text-nowrap">Compare <span class="text-primary">Airport Parking</span>
+            With
+            Confidence</h1>
+        <p class="mb-0">Monitor rating and explore over 3 million satisfied customers.</p>
+    </div>
+
+    <!-- Satisfied Customers Section -->
+    <div class="row g-3">
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.2s">
+            <div class="content-box bg-light p-4 rounded d-flex flex-column">
+                <i class="fas fa-box text-primary mb-3" style="font-size: 3rem;"></i>
+                <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                    <h2 class="mb-3">Over 3 Million Satisfied Customers</h2>
+                    <p>We pride ourselves on our outstanding customer service and are here to help you with any advice
+                        you may need.</p>
+                </div>
+                <div class="mt-auto">
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.3s">
+            <div class="content-box bg-light p-4 rounded d-flex flex-column">
+                <i class="fas fa-award text-primary mb-3" style="font-size: 3rem;"></i>
+                <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                    <h2 class="mb-3">Price Check Promise</h2>
+                    <p>A hassle-free way of comparing airport parking options. We guarantee to give you the lowest
+                        prices with our Price Check Promise.</p>
+                </div>
+                <div class="mt-auto">
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.4s">
+            <div class="content-box bg-light p-4 rounded d-flex flex-column">
+                <i class="fas fa-comments text-primary mb-3" style="font-size: 3rem;"></i>
+                <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                    <h2 class="mb-3">Open Review Policy Gives You Power</h2>
+                    <p>Our review system collects honest feedback on every car park. We openly display the good & bad
+                        reviews so that you can make the most informed decision.</p>
+                </div>
+                <div class="mt-auto">
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 text-center wow fadeInUp" data-wow-delay="0.5s">
+            <div class="content-box bg-light p-4 rounded d-flex flex-column">
+                <i class="fas fa-lock text-primary mb-3" style="font-size: 3rem;"></i>
+                <div class="flex-grow-1 d-flex flex-column justify-content-center">
+                    <h2 class="mb-3">Secure & Safe Payments</h2>
+                    <p>Our payment system uses encryption to fully protect your details. We also offer PayPal as an
+                        additional payment option.</p>
+                </div>
+                <div class="mt-auto">
+                    <a href="#" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Reasons Start -->
+<div class="container-fluid steps bg-light py-5">
+    <div class="container-fluid text-white py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize mb-3">5 Reasons to Book with <span
+                    class="text-primary">SkyLink</span></h1>
+            <p class="mb-0">We offer exclusive parking discounts that beat other sites.</p>
+        </div>
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="reason-item rounded text-center p-4">
+                    <div class="reason-number mb-3 text-primary" style="font-size: 2rem;">1.</div>
+                    <h5 class="mb-3">We Do the Hard Work</h5>
+                    <p class="mb-0">We compare car parks for you, ensuring you get the best options available.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="reason-item rounded text-center p-4">
+                    <div class="reason-number mb-3 text-primary" style="font-size: 2rem;">2.</div>
+                    <h5 class="mb-3">Easily Amend Your Booking</h5>
+                    <p class="mb-0">You can easily amend your booking in MyAccount.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="reason-item rounded text-center p-4">
+                    <div class="reason-number mb-3 text-primary" style="font-size: 2rem;">3.</div>
+                    <h5 class="mb-3">Take Advantage of Add-ons</h5>
+                    <p class="mb-0">Enjoy add-ons such as lounge access & car hire with your booking.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="reason-item rounded text-center p-4">
+                    <div class="reason-number mb-3 text-primary" style="font-size: 2rem;">4.</div>
+                    <h5 class="mb-3">Book a Hotel with Parking</h5>
+                    <p class="mb-0">Start your trip a day early by booking a hotel with parking.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="reason-item rounded text-center p-4">
+                    <div class="reason-number mb-3 text-primary" style="font-size: 2rem;">5.</div>
+                    <h5 class="mb-3">Exclusive Discounts</h5>
+                    <p class="mb-0">We offer exclusive parking discounts that beat other sites.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Reasons End -->
+
+
+<!-- Join Section Start -->
+<div class="container-fluid join bg-light py-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h1 class="display-5 text-capitalize mb-4">Join Here for Discounts and Offers</h1>
+            <p class="mb-4">Sign-up for the SkyLink weekly newsletter and you’ll receive discounted airport
+                parking and hotels across the UK.</p>
+            <form class="d-flex justify-content-center">
+                <div class="input-group mb-3" style="max-width: 500px;">
+                    <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
+                    <button class="btn btn-primary" type="submit">Join Now</button>
+                </div>
+            </form>
+            <p class="mt-3">Stay updated on the latest offers and never miss out on savings!</p>
+        </div>
+    </div>
+</div>
+<!-- Join Section End -->
+
+
+
+
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial py-5 mb-5">
     <div class="container pb-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h1 class="display-5 text-capitalize mb-3">Vehicle <span class="text-primary">Categories</span></h1>
-            <p class="mb-0">Explore our diverse range of vehicles tailored to meet your needs. Whether you seek luxury,
-                efficiency, or adventure, we have the perfect ride for you!</p>
+            <h1 class="display-5 text-capitalize mb-3">Our Clients<span class="text-primary"> Reviews</span></h1>
+            <p class="mb-0">Our customers trust us for convenient, secure, and affordable airport parking solutions.
+                Here's what they have to say about our service:</p>
         </div>
-        <div class="categories-carousel owl-carousel wow fadeInUp" data-wow-delay="0.1s">
-            <!-- Category 1 -->
-            <div class="categories-item p-4">
-                <div class="categories-item-inner">
-                    <div class="categories-img rounded-top">
-                        <img src="img/car-1.png" class="img-fluid w-100 rounded-top" alt="Mercedes Benz R3">
-                    </div>
-                    <div class="categories-content rounded-bottom p-4">
-                        <h4>Mercedes Benz R3</h4>
-                        <div class="categories-review mb-4">
-                            <div class="me-3">4.5 Review</div>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="testimonial-item">
+                <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i></div>
+                <div class="testimonial-inner p-4">
+                    <img src="img/testimonial-1.jpg" class="img-fluid" alt="">
+                    <div class="ms-4">
+                        <h4>John Doe</h4>
+                        <p>Frequent Flyer</p>
+                        <div class="d-flex text-primary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star text-body"></i>
                         </div>
-                        <div class="mb-4">
-                            <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">$99.00/Day</h4>
-                        </div>
-                        <div class="row gy-2 gx-0 text-center mb-4">
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-users text-dark"></i> <span class="text-body ms-1">4 Seats</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-car text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-gas-pump text-dark"></i> <span class="text-body ms-1">Petrol</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-calendar-alt text-dark"></i> <span class="text-body ms-1">2015</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-cogs text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-road text-dark"></i> <span class="text-body ms-1">27K Miles</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="categories-item p-4">
-                <div class="categories-item-inner">
-                    <div class="categories-img rounded-top">
-                        <img src="img/car-2.png" class="img-fluid w-100 rounded-top" alt="Toyota Corolla Cross">
-                    </div>
-                    <div class="categories-content rounded-bottom p-4">
-                        <h4>Toyota Corolla Cross</h4>
-                        <div class="categories-review mb-4">
-                            <div class="me-3">3.5 Review</div>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">$128.00/Day</h4>
-                        </div>
-                        <div class="row gy-2 gx-0 text-center mb-4">
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-users text-dark"></i> <span class="text-body ms-1">4 Seats</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-car text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-gas-pump text-dark"></i> <span class="text-body ms-1">Petrol</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-calendar-alt text-dark"></i> <span class="text-body ms-1">2015</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-cogs text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-road text-dark"></i> <span class="text-body ms-1">27K Miles</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
-                    </div>
+                <div class="border-top rounded-bottom p-4">
+                    <p class="mb-0">Amazing service! Parking was easy and stress-free, and the shuttle to the
+                        terminal was prompt.</p>
                 </div>
             </div>
-
-            <!-- Category 3 -->
-            <div class="categories-item p-4">
-                <div class="categories-item-inner">
-                    <div class="categories-img rounded-top">
-                        <img src="img/car-3.png" class="img-fluid w-100 rounded-top" alt="Tesla Model S Plaid">
-                    </div>
-                    <div class="categories-content rounded-bottom p-4">
-                        <h4>Tesla Model S Plaid</h4>
-                        <div class="categories-review mb-4">
-                            <div class="me-3">3.8 Review</div>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i></div>
+                <div class="testimonial-inner p-4">
+                    <img src="img/testimonial-2.jpg" class="img-fluid" alt="">
+                    <div class="ms-4">
+                        <h4>Jane Smith</h4>
+                        <p>Business Traveler</p>
+                        <div class="d-flex text-primary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star text-body"></i>
+                            <i class="fas fa-star text-body"></i>
                         </div>
-                        <div class="mb-4">
-                            <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">$170.00/Day</h4>
-                        </div>
-                        <div class="row gy-2 gx-0 text-center mb-4">
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-users text-dark"></i> <span class="text-body ms-1">4 Seats</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-car text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-gas-pump text-dark"></i> <span class="text-body ms-1">Electric</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-calendar-alt text-dark"></i> <span class="text-body ms-1">2021</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-cogs text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-road text-dark"></i> <span class="text-body ms-1">5K Miles</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
                     </div>
                 </div>
+                <div class="border-top rounded-bottom p-4">
+                    <p class="mb-0">Quick and reliable service. I parked my car and felt confident it was in safe
+                        hands while I was away.</p>
+                </div>
             </div>
-
-            <!-- Category 4 -->
-            <div class="categories-item p-4">
-                <div class="categories-item-inner">
-                    <div class="categories-img rounded-top">
-                        <img src="img/car-4.png" class="img-fluid w-100 rounded-top" alt="Hyundai Kona Electric">
+            <div class="testimonial-item">
+                <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i></div>
+                <div class="testimonial-inner p-4">
+                    <img src="img/testimonial-3.jpg" class="img-fluid" alt="">
+                    <div class="ms-4">
+                        <h4>Mark Johnson</h4>
+                        <p>Leisure Traveler</p>
+                        <div class="d-flex text-primary">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star text-body"></i>
+                            <i class="fas fa-star text-body"></i>
+                            <i class="fas fa-star text-body"></i>
+                        </div>
                     </div>
-                    <div class="categories-content rounded-bottom p-4">
-                        <h4>Hyundai Kona Electric</h4>
-                        <div class="categories-review mb-4">
-                            <div class="me-3">4.8 Review</div>
-                            <div class="d-flex justify-content-center text-secondary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <h4 class="bg-white text-primary rounded-pill py-2 px-4 mb-0">$187.00/Day</h4>
-                        </div>
-                        <div class="row gy-2 gx-0 text-center mb-4">
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-users text-dark"></i> <span class="text-body ms-1">4 Seats</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-car text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-gas-pump text-dark"></i> <span class="text-body ms-1">Electric</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-calendar-alt text-dark"></i> <span class="text-body ms-1">2021</span>
-                            </div>
-                            <div class="col-4 border-end border-white">
-                                <i class="fas fa-cogs text-dark"></i> <span class="text-body ms-1">Automatic</span>
-                            </div>
-                            <div class="col-4">
-                                <i class="fas fa-road text-dark"></i> <span class="text-body ms-1">3K Miles</span>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-primary rounded-pill d-flex justify-content-center py-3">Book Now</a>
-                    </div>
+                </div>
+                <div class="border-top rounded-bottom p-4">
+                    <p class="mb-0">Great value for money. The lot was close to the airport, and the staff were very
+                        helpful.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Car Categories End -->
-
-    <!-- Banner Start -->
-    <div class="container-fluid banner pb-5 wow zoomInDown">
-        <div class="container-fluid pb-5">
-            <div class="banner-item rounded">
-                <img src="img/banner-1.jpg" class="img-fluid rounded w-100" alt="Rent Your Car">
-                <div class="banner-content">
-                    <h2 class="text-primary">Rent Your Car Today</h2>
-                    <h1 class="text-white">Interested in Renting?</h1>
-                    <p class="text-white">Don’t hesitate to reach out! Our team is here to assist you with all your
-                        rental
-                        needs.</p>
-                    <div class="banner-btn">
-                        <a href="#" class="btn btn-secondary rounded-pill py-3 px-4 px-md-5 me-2">WhatsApp</a>
-                        <a href="#" class="btn btn-primary rounded-pill py-3 px-4 px-md-5 ms-2">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Banner End -->
-
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid testimonial pb-5">
-        <div class="container pb-5">
-            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-                <h1 class="display-5 text-capitalize mb-3">Our Clients<span class="text-primary"> Reviews</span></h1>
-                <p class="mb-0">Our customers trust us for convenient, secure, and affordable airport parking solutions.
-                    Here's what they have to say about our service:</p>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item">
-                    <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i></div>
-                    <div class="testimonial-inner p-4">
-                        <img src="img/testimonial-1.jpg" class="img-fluid" alt="">
-                        <div class="ms-4">
-                            <h4>John Doe</h4>
-                            <p>Frequent Flyer</p>
-                            <div class="d-flex text-primary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top rounded-bottom p-4">
-                        <p class="mb-0">Amazing service! Parking was easy and stress-free, and the shuttle to the
-                            terminal was prompt.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i></div>
-                    <div class="testimonial-inner p-4">
-                        <img src="img/testimonial-2.jpg" class="img-fluid" alt="">
-                        <div class="ms-4">
-                            <h4>Jane Smith</h4>
-                            <p>Business Traveler</p>
-                            <div class="d-flex text-primary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top rounded-bottom p-4">
-                        <p class="mb-0">Quick and reliable service. I parked my car and felt confident it was in safe
-                            hands while I was away.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote"><i class="fa fa-quote-right fa-2x"></i></div>
-                    <div class="testimonial-inner p-4">
-                        <img src="img/testimonial-3.jpg" class="img-fluid" alt="">
-                        <div class="ms-4">
-                            <h4>Mark Johnson</h4>
-                            <p>Leisure Traveler</p>
-                            <div class="d-flex text-primary">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star text-body"></i>
-                                <i class="fas fa-star text-body"></i>
-                                <i class="fas fa-star text-body"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border-top rounded-bottom p-4">
-                        <p class="mb-0">Great value for money. The lot was close to the airport, and the staff were very
-                            helpful.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
+</div>
+<!-- Testimonial End -->
 
 
 
 
 
 
-    @endsection
+@endsection

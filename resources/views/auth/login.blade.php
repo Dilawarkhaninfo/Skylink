@@ -68,34 +68,39 @@
 
     <body>
         <section>
-            <!--  Request me for a signup form or any type of help  -->
-            <div class="login-form">
-                <form action="/examples/actions/confirmation.php" method="post">
-                    <div class="logo-container text-center p-4">
+            <!-- Request me for a signup form or any type of help -->
+            <div class="container-fluid d-flex steps justify-content-center align-items-center"
+                style="min-height: 100vh;">
+                <div class="login-form p-5 bg-light rounded shadow">
+                    <div class="text-center">
                         <span>
-                            <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo-circle p-3">
+                            <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo-circle mb-4"
+                                style="width: 100px;">
                         </span>
+                        <h4 class="modal-title mb-4">Login to Your Account</h4>
                     </div>
-
-                    <h4 class="modal-title">Login to Your Account</h4>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required="required">
+                    <form action="/examples/actions/confirmation.php" method="post">
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" placeholder="Username" required="required">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group small clearfix mb-4">
+                            <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
+                            <a href="{{ url('/auth/forgot-password') }}" class="forgot-link float-end">Forgot
+                                Password?</a>
+                        </div>
+                        <a href="{{ url('/admin/dashboard') }}"
+                            class="btn btn-primary btn-block btn-lg pt-3">Login</button>
+                    </form>
+                    <div class="text-center small mt-4">
+                        Don't have an account? <a href="{{ url('/auth/register') }}">Sign up</a>
                     </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" required="required">
-                    </div>
-                    <div class="form-group small clearfix">
-                        <label class="checkbox-inline"><input type="checkbox"> Remember me</label>
-                        <a href="{{ url('/auth/forgot-password') }}" class="forgot-link">Forgot Password?</a>
-                    </div>
-                    <a href="{{ url('/admin/dashboard') }}" class="btn btn-primary btn-block btn-lg  pt-3"
-                        value="Login">
-                        Login</a>
-                </form>
-                <div class="text-center small">Don't have an account? <a href="{{ url('/auth/register') }}">Sign up</a>
                 </div>
             </div>
         </section>
+
 
 
         <!-- jQuery (Must be loaded before Bootstrap JS and other scripts that depend on it) -->

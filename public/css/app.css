@@ -1075,3 +1075,63 @@
 .login-form a {
     color: #3480d0;
 }
+
+.content-box {
+    min-height: 370px;
+    /* Adjust this height as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.content-box h2 {
+    font-size: 1.5rem;
+}
+
+.content-box p {
+    flex-grow: 1;
+}
+
+.content-box .mt-auto {
+    margin-top: auto;
+}
+
+.parking {
+    background-color: #f8f9fa;
+    /* Light background */
+}
+
+.parking-details,
+.parking-summary {
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+.parking-summary {
+    background-color: #343a40;
+    /* Dark background for summary */
+}
+
+.parking-summary h4 {
+    color: #ffffff;
+    /* White text */
+}
+
+.parking-summary p {
+    color: #ffffff;
+    /* White text */
+}
+
+input[type="date"],
+input[type="time"] {
+    border: 1px solid #ced4da;
+    /* Light border */
+    border-radius: 0.25rem;
+    /* Rounded corners */
+}
+
+.btn-primary {
+    border-radius: 0.25rem;
+    /* Rounded corners */
+}

@@ -66,7 +66,7 @@
             </div>
             <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="bg-secondary p-5 rounded">
-                    <h4 class="text-primary mb-4">Send Us a Message</h4>
+                    <h4 class="text-white mb-4">Send Us a Message</h4>
                     <form>
                         <div class="row g-4">
                             <div class="col-lg-12 col-xl-6">

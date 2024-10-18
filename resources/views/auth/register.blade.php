@@ -70,36 +70,40 @@
 
     <body>
         <section>
-            <!--  Request me for a signup form or any type of help  -->
-            <div class="login-form">
-                <form action="/examples/actions/confirmation.php" method="post">
-                    <div class="logo-container text-center">
+            <!-- Request me for a signup form or any type of help -->
+            <div class="container-fluid steps d-flex justify-content-center align-items-center"
+                style="min-height: 100vh;">
+                <div class="login-form p-5 bg-light rounded shadow">
+                    <div class="text-center">
                         <span>
-                            <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo-circle p-3">
+                            <img src="{{ asset('img/logo.png') }}" alt="logo" class="logo-circle mb-4"
+                                style="width: 100px;">
                         </span>
+                        <h4 class="modal-title mb-4">Register a New Account</h4>
                     </div>
-                    <h4 class="modal-title">Register to New Account</h4>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required="required">
+                    <form action="/examples/actions/confirmation.php" method="post">
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" placeholder="Username" required="required">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required="required">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" required="required">
+                        </div>
+                        <div class="form-group mb-4">
+                            <input type="password" class="form-control" placeholder="Confirm Password"
+                                required="required">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Register</button>
+                    </form>
+                    <div class="text-center small mt-4">
+                        Already have an account? <a href="{{ url('/auth/login') }}">Log in</a>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email" required="required">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" required="required">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Confirm Password" required="required">
-                    </div>
-                    <div class="form-group small clearfix">
-                    </div>
-                    <a href="{{ url('/admin/dashboard') }}" class="btn btn-primary btn-block btn-lg" value="Login">
-                        Register</a>
-                </form>
-                <div class="text-center small">I have already account? <a href="{{ url('/auth/login') }}">Sign up</a>
                 </div>
             </div>
         </section>
+
 
         <!-- jQuery (Must be loaded before Bootstrap JS and other scripts that depend on it) -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

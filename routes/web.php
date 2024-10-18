@@ -4,28 +4,43 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
 /*
-|--------------------------------------------------------------------------
+|---------------------------------------------------------------------------
 | Web Routes
-|--------------------------------------------------------------------------
+|---------------------------------------------------------------------------
 */
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// About Us Page
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+// Resend Confirmation Page
+Route::get('/resendconformation', function () {
+    return view('resendconformation');
+})->name('resendconformation');
 
-// Services Page
-Route::get('/services', function () {
-    return view('services');
-})->name('services');
+// Car Hire Page
+Route::get('/carhire', function () {
+    return view('carhire');
+})->name('carhire');
+
+// FAQ Page
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
+// My Booking Page
+Route::get('/mybooking', function () {
+    return view('mybooking');
+})->name('mybooking');
 
 // Contact Us Page
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+// Airport Page
+Route::get('/airport', function () {
+    return view('airport');
+})->name('airport');
 
 // Authentication Routes (Frontend Only)
 Route::prefix('auth')->name('auth.')->group(function () {
@@ -76,6 +91,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/users/edit/{id}', function ($id) {
         return view('admin.users.edit', ['id' => $id]);
     })->name('users.edit');
+    Route::get('/users/show/{id}', function ($id) {
+        return view('admin.users.show', ['id' => $id]);
+    })->name('users.show');
+
+    // User Management (Adding the missing route)
+    Route::get('/users-management', function () {
+        return view('admin.users-management.index'); // Adjust the view path as needed
+    })->name('user-management.index');
 
     // Reports & Analytics
     Route::get('/reports', function () {
@@ -89,4 +112,39 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/settings/payment-gateway', function () {
         return view('admin.settings.payment-gateway');
     })->name('settings.paymentGateway');
+
+    // Car Availability per Airport
+    Route::get('/cars', function () {
+        return view('admin.cars.index');
+    })->name('cars.index');
+
+    // Pricing and Payment Management
+    Route::get('/pricing', function () {
+        return view('admin.pricing.index');
+    })->name('pricing.index');
+
+    // Notifications & Alerts
+    Route::get('/notifications', function () {
+        return view('admin.notifications.index');
+    })->name('notifications.index');
+
+    // Calendar View for Bookings
+    Route::get('/calendar', function () {
+        return view('admin.calendar.index');
+    })->name('calendar.index');
+
+    // Refund and Cancellation Management
+    Route::get('/refunds', function () {
+        return view('admin.refunds.index');
+    })->name('refunds.index');
+
+    // Two-Factor Authentication
+    Route::get('/two-factor-auth', function () {
+        return view('admin.two-factor-auth.index');
+    })->name('two-factor-auth.index');
+
+    // Live Chat
+    Route::get('/chat', function () {
+        return view('admin.chat.index');
+    })->name('chat.index');
 });
