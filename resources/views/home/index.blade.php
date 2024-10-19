@@ -11,51 +11,51 @@
 <div class="container-fluid steps p-0 m-0 bg-dark text-white">
     <div class="container py-5">
         <div class="row g-5 align-items-center justify-content-center">
-            <div class="col-lg-10 py-5">
+            <div class="col-lg-11 py-5">
                 <!-- New Form Section -->
-                <div class=" rounded p-5">
-                    <h4 class="text-white text-center mb-4">Get 15% Off Your Rental
-                        Plan your trip now and enjoy great savings!</h4>
+                <div class="rounded p-5"
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); background-size: cover; background-position: center;">
+                    <h4 class="text-white text-center mb-4">Get 15% Off Your Rental <br> Plan your trip now and enjoy
+                        great savings!</h4>
                     <form>
-                        <div class="row text-start g-3 mt-3">
+                        <div class="row g-3 mt-3">
                             <!-- Airport Name -->
-                            <div class="col-2">
+                            <div class="col-md-4 col-lg-2">
                                 <label for="airport-name" class="form-label text-white">Airport Name</label>
                                 <input id="airport-name" class="form-control" type="text"
                                     placeholder="Enter Airport Name" required>
                             </div>
                             <!-- Drop-off Date and Time -->
-                            <div class="col-2">
+                            <div class="col-md-4 col-lg-2">
                                 <label for="dropoff-date" class="form-label text-white">Drop-off Date</label>
                                 <input id="dropoff-date" class="form-control" type="date" required>
                             </div>
-                            <div class="col-2">
+                            <div class="col-md-4 col-lg-2">
                                 <label for="dropoff-time" class="form-label text-white">Drop-off Time</label>
                                 <input id="dropoff-time" class="form-control" type="time" required>
                             </div>
                             <!-- Pickup Date and Time -->
-                            <div class="col-2">
+                            <div class="col-md-4 col-lg-2">
                                 <label for="pickup-date" class="form-label text-white">Pickup Date</label>
                                 <input id="pickup-date" class="form-control" type="date" required>
                             </div>
-                            <div class="col-2">
+                            <div class="col-md-4 col-lg-2">
                                 <label for="pickup-time" class="form-label text-white">Pickup Time</label>
                                 <input id="pickup-time" class="form-control" type="time" required>
                             </div>
                             <!-- Promo Code -->
-                            <div class="col-2">
+                            <div class="col-md-4 col-lg-2">
                                 <label for="promo-code" class="form-label text-white">Voucher</label>
-                                <input id="promo-code" class="form-control" type="text"
-                                    placeholder="Enter Voucher (Optional)">
+                                <input id="promo-code" class="form-control" type="text" placeholder="Enter Voucher">
                             </div>
-                            <!-- Extras -->
                             <!-- Submit Button -->
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-2">Search for Parking</button>
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-primary w-100 py-3">Search for Parking</button>
                             </div>
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>
@@ -413,8 +413,8 @@
 <div class="container-fluid steps bg-light py-5">
     <div class="container-fluid text-white py-5">
         <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
-            <h1 class="display-5 text-capitalize mb-3">5 Reasons to Book with <span
-                    class="text-primary">SkyLink</span></h1>
+            <h1 class="display-5 text-capitalize mb-3">5 Reasons to Book with <span class="text-primary">SkyLink</span>
+            </h1>
             <p class="mb-0">We offer exclusive parking discounts that beat other sites.</p>
         </div>
         <div class="row justify-content-center g-4">

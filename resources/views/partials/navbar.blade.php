@@ -30,7 +30,7 @@
 <!-- Topbar End -->
 
 <!-- Navbar & Hero Start -->
-<div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0 shadow">
+<div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-1 py-lg-0 shadow">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a href="" class="navbar-brand p-0">
@@ -45,12 +45,18 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Airport Parking</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ url('/airport') }}" class="dropdown-item">Airport 1</a>
-                            <a href="{{ url('/airport') }}" class="dropdown-item">Airport 2</a>
-                            <a href="{{ url('/airport') }}" class="dropdown-item">Airport 3</a>
-                            <a href="{{ url('/airport') }}" class="dropdown-item">Airport 4</a>
-                            <a href="{{ url('/airport') }}" class="dropdown-item">Airport 5</a>
-                            <a href="{{ url('/airport') }}" class="dropdown-item">Airport 6</a>
+                            <a href="{{ url('/airport') }}" class="dropdown-item">Hartsfield-Jackson Atlanta
+                                International Airport (ATL)</a>
+                            <a href="{{ url('/airport') }}" class="dropdown-item">Los Angeles International Airport
+                                (LAX)</a>
+                            <a href="{{ url('/airport') }}" class="dropdown-item">Chicago O'Hare International Airport
+                                (ORD)</a>
+                            <a href="{{ url('/airport') }}" class="dropdown-item">Dallas/Fort Worth International
+                                Airport (DFW)</a>
+                            <a href="{{ url('/airport') }}" class="dropdown-item">Denver International Airport (DEN)</a>
+                            <a href="{{ url('/airport') }}" class="dropdown-item">John F. Kennedy International Airport
+                                (JFK)</a>
+
                         </div>
                     </div>
                     <a class="nav-item nav-link {{ request()->is('carhire') ? 'active' : '' }}"

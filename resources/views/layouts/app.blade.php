@@ -30,6 +30,12 @@
     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
     @stack('styles')
+
+    <style>
+    body {
+        font-family: 'Poppins', sans-serif !important;
+    }
+    </style>
 </head>
 
 <body>
@@ -43,6 +49,8 @@
 
     <!-- jQuery (Must be loaded before Bootstrap JS and other scripts that depend on it) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
