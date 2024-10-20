@@ -1138,3 +1138,8 @@ input[type="time"] {
     border-radius: 0.25rem;
     /* Rounded corners */
 }
+
+.button-width {
+    width: 100%;
+    /* Set the width to 100% to fill the column */
+}

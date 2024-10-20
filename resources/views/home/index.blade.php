@@ -50,7 +50,8 @@
                             </div>
                             <!-- Submit Button -->
                             <div class="col-12 mt-4">
-                                <button class="btn btn-primary w-100 py-3">Search for Parking</button>
+                                <a href="{{ route('carservice') }}" class="btn btn-primary w-100 py-3">Search for
+                                    Parking</a>
                             </div>
                         </div>
                     </form>

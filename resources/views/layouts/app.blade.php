@@ -104,6 +104,21 @@
         });
     });
     </script>
+
+    <script>
+    function nextStep(step) {
+        document.querySelectorAll('.step').forEach((el) => {
+            el.style.display = 'none';
+        });
+        document.getElementById('step' + step).style.display = 'block';
+    }
+
+    function previousStep(step) {
+        nextStep(step);
+    }
+    </script>
+
+
 </body>
 
 </html>

@@ -37,6 +37,16 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+// Contact Us Page
+Route::get('/bookingform', function () {
+    return view('bookingform');
+})->name('bookingform');
+
+// Contact Us Page
+Route::get('/carservice', function () {
+    return view('carservice');
+})->name('carservice');
+
 // Airport Page
 Route::get('/airport', function () {
     return view('airport');
